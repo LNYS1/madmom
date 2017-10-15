@@ -106,3 +106,10 @@ class TestEvaluateScript(unittest.TestCase):
         res = np.fromiter(res[1].split(',')[1:], dtype=np.float)
         self.assertTrue(
             np.allclose(res, [0.3, 1, 0, 0, 1]))
+
+    def test_alignment(self):
+        res = run_script('alignment')
+        # second line contains the results
+        res = np.fromiter(res[1].split(',')[1:], dtype=np.float)
+        self.assertTrue(
+            np.allclose(res, [0.3, 1, 0, 0, 1]))

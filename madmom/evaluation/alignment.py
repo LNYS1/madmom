@@ -447,7 +447,7 @@ def add_parser(parser):
 
     ''')
     p.set_defaults(eval=AlignmentEvaluation, sum_eval=AlignmentSumEvaluation,
-                   mean_eval=AlignmentMeanEvaluation)
+                   mean_eval=AlignmentMeanEvaluation, load_fn=load_alignment)
 
     # files used for evaluation
     _, f = evaluation_io(p, ann_suffix='.alignment',
